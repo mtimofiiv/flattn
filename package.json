@@ -1,5 +1,5 @@
 {
-  "name": "@mtimofiiv/flatten",
+  "name": "flattn",
   "version": "1.0.0",
   "description": "Flattens javascript objects nicely, in an entirely type-aware way.",
   "main": "index.js",

@@ -5,7 +5,7 @@ process.env.TEST_MODE = true;
 const expect = require('chai').expect;
 const flattenModule = require('../index');
 
-describe('@mtimofiiv/flatten', () => {
+describe('flattn', () => {
   const fixture = {
     playwright: 'William Shakespeare',
     play: 'Titus Andronicus',

@@ -11,13 +11,13 @@ If you use this in a frontend project, make sure it gets transpiled!
 ## Getting started
 
 ```
-npm install @mtimofiiv/flatten
+npm install flattn
 ```
 
 Then, in your JS file:
 
 ```
-const flatten = require('@mtimofiiv/flatten');
+const flattn = require('flattn');
 
 const myCrazyDeepObject = {
   nested: {
@@ -25,7 +25,7 @@ const myCrazyDeepObject = {
   }
 };
 
-flatten(myCrazyDeepObject); // outputs a beautifully flat object
+flattn(myCrazyDeepObject); // outputs a beautifully flat object
 ```
 
 ## Options
