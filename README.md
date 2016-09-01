@@ -1,5 +1,7 @@
 # @mtimofiiv/flatten
 
+[![Travis](https://img.shields.io/travis/mtimofiiv/flatten.svg?maxAge=2592000)](https://travis-ci.org/mtimofiiv/flatten)
+
 There are lots of flattening libraries out there, but I decided to write my own because I wanted to write my own :)
 
 Mainly, I wanted to write it in the latest ES6 that nodejs `6.x` gives us, with beautiful things like default params!
