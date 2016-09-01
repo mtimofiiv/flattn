@@ -1,0 +1,25 @@
+{
+  "name": "@mtimofiiv/flatten",
+  "version": "1.0.0",
+  "description": "Flattens javascript objects nicely, in an entirely type-aware way.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtimofiiv/flatten.git"
+  },
+  "keywords": [
+    "flatten"
+  ],
+  "author": "Mike Timofiiv (https://fiiv.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtimofiiv/flatten/issues"
+  },
+  "homepage": "https://github.com/mtimofiiv/flatten#readme"
+}
