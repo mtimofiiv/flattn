@@ -2,6 +2,10 @@
 
 There are lots of flattening libraries out there, but I decided to write my own because I wanted to write my own :)
 
+Mainly, I wanted to write it in the latest ES6 that nodejs `6.x` gives us, with beautiful things like default params!
+
+If you use this in a frontend project, make sure it gets transpiled!
+
 ## Getting started
 
 ```
