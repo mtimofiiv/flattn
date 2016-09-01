@@ -1,4 +1,4 @@
-# @mtimofiiv/flatten
+# flattn
 
 [![Travis](https://img.shields.io/travis/mtimofiiv/flatten.svg?maxAge=2592000)](https://travis-ci.org/mtimofiiv/flatten)
 
@@ -30,7 +30,7 @@ flattn(myCrazyDeepObject); // outputs a beautifully flat object
 
 ## Options
 
-`flatten(object, {})` takes a couple optional params:
+`flattn(object, {})` takes a couple optional params:
 
  * `crush` (array) - this will remove a nesting namespace from the final product (ie. if you crush `[ 'metadata' ]`, then `{ metadata: { hello: 'world' }}` will return `{ hello: 'world' }`)
  * `stringifyNull` (boolean) - this will turn `null`s into `''`
