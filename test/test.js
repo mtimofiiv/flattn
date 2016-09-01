@@ -1,7 +1,5 @@
 'use strict';
 
-process.env.TEST_MODE = true;
-
 const expect = require('chai').expect;
 const flattenModule = require('../index');
 
@@ -28,9 +26,7 @@ describe('flattn', () => {
   };
 
   it('flatten with no options', () => {
-    expect(flattenModule).to.have.property('flatten');
-
-    const mutated = flattenModule.flatten(fixture);
+    const mutated = flattenModule(fixture);
 
     expect(mutated).to.have.property('playwright', fixture.playwright);
     expect(mutated).to.have.property('play', fixture.play);
@@ -63,7 +59,7 @@ describe('flattn', () => {
   });
 
   it('flatten with crushed object', () => {
-    const mutated = flattenModule.flatten(fixture, { crush: [ 'metadata' ] });
+    const mutated = flattenModule(fixture, { crush: [ 'metadata' ] });
 
     expect(mutated).to.not.have.property('metadata');
     expect(mutated).to.have.property('genre_primary', fixture.metadata.genre.primary);
@@ -72,19 +68,19 @@ describe('flattn', () => {
   });
 
   it('flatten with pruneFunctions', () => {
-    const mutated = flattenModule.flatten(fixture, { pruneFunctions: true });
+    const mutated = flattenModule(fixture, { pruneFunctions: true });
 
     expect(mutated).to.not.have.property('enact');
   });
 
   it('flatten with stringifyNull', () => {
-    const mutated = flattenModule.flatten(fixture, { stringifyNull: true });
+    const mutated = flattenModule(fixture, { stringifyNull: true });
 
     expect(mutated).to.have.property('currentVenue', '');
   });
 
   it('flatten with different separator', () => {
-    const mutated = flattenModule.flatten(fixture, { separator: '::' });
+    const mutated = flattenModule(fixture, { separator: '::' });
 
     expect(mutated).to.have.property('acts::0', fixture.acts[0]);
     expect(mutated).to.have.property('acts::1', fixture.acts[1]);
@@ -101,22 +97,6 @@ describe('flattn', () => {
     expect(mutated).to.have.property('metadata::genre::primary', fixture.metadata.genre.primary);
     expect(mutated).to.have.property('metadata::genre::subtypes::0', fixture.metadata.genre.subtypes[0]);
     expect(mutated).to.have.property('metadata::genre::subtypes::1', fixture.metadata.genre.subtypes[1]);
-  });
-
-  it('isObject correctly determines the object prototype', () => {
-    expect(flattenModule).to.have.property('isObject');
-
-    expect(flattenModule.isObject([])).to.equal(false);
-    expect(flattenModule.isObject('sdfsdf')).to.equal(false);
-    expect(flattenModule.isObject(1)).to.equal(false);
-    expect(flattenModule.isObject(null)).to.equal(false);
-    expect(flattenModule.isObject(false)).to.equal(false);
-    expect(flattenModule.isObject(undefined)).to.equal(false);
-    expect(flattenModule.isObject()).to.equal(false);
-
-    expect(flattenModule.isObject({})).to.equal(true);
-    expect(flattenModule.isObject({ hello: 'wutwut' })).to.equal(true);
-    expect(flattenModule.isObject(fixture)).to.equal(true);
   });
 
 });
