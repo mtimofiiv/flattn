@@ -1,6 +1,6 @@
 # flattn
 
-[![Travis](https://img.shields.io/travis/mtimofiiv/flatten.svg)](https://travis-ci.org/mtimofiiv/flatten)
+[![Travis](https://api.travis-ci.org/mtimofiiv/flatten.svg)](https://travis-ci.org/mtimofiiv/flatten)
 
 There are lots of flattening libraries out there, but I decided to write my own because I wanted to write my own :)
 
