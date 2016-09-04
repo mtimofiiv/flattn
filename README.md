@@ -1,6 +1,6 @@
 # flattn
 
-[![Travis](https://img.shields.io/travis/mtimofiiv/flatten.svg?maxAge=2592000)](https://travis-ci.org/mtimofiiv/flatten)
+[![Travis](https://img.shields.io/travis/mtimofiiv/flatten.svg)](https://travis-ci.org/mtimofiiv/flatten)
 
 There are lots of flattening libraries out there, but I decided to write my own because I wanted to write my own :)
 
@@ -16,7 +16,7 @@ npm install flattn
 
 Then, in your JS file:
 
-```
+```js
 const flattn = require('flattn');
 
 const myCrazyDeepObject = {
